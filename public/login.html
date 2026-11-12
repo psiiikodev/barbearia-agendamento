@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Entrar — Barbearia</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/login.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Voltar para a página inicial">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BARBEARIA</span>
+      </a>
+      <a class="header-note back-link" href="/">Voltar ao início</a>
+    </header>
+
+    <main>
+      <section class="login-card" aria-labelledby="login-title">
+        <p class="eyebrow">ÁREA ADMINISTRATIVA</p>
+        <h1 class="admin-title" id="login-title">Entrar</h1>
+        <p class="hero-copy">Informe suas credenciais para continuar.</p>
+        <form id="login-form">
+          <label>
+            Usuário
+            <input name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Senha
+            <input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <button class="primary-button" type="submit">Entrar</button>
+          <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

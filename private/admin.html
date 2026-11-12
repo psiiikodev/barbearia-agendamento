@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Área de gestão dos serviços e barbeiros."
+    />
+    <title>Gestão — Barbearia</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/admin.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Voltar para a página inicial">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BARBEARIA</span>
+      </a>
+      <button class="text-button" id="logout-button" type="button">Sair</button>
+    </header>
+
+    <main>
+      <section class="admin-heading">
+        <p class="eyebrow">ÁREA ADMINISTRATIVA</p>
+        <h1 class="admin-title">Cadastros</h1>
+        <p class="hero-copy">
+          Gerencie os serviços oferecidos e os profissionais da barbearia.
+        </p>
+      </section>
+
+      <section class="admin-grid" aria-label="Gerenciar cadastros">
+        <article class="admin-card">
+          <h2>Novo serviço</h2>
+          <form id="service-form">
+            <label>
+              Nome
+              <input name="name" type="text" maxlength="100" required />
+            </label>
+            <div class="form-row">
+              <label>
+                Duração (min)
+                <input
+                  name="durationMinutes"
+                  type="number"
+                  min="1"
+                  step="1"
+                  required
+                />
+              </label>
+              <label>
+                Preço (R$)
+                <input
+                  name="price"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  required
+                />
+              </label>
+            </div>
+            <button class="primary-button" type="submit">Cadastrar serviço</button>
+            <p class="form-message" id="service-message" role="status" aria-live="polite"></p>
+          </form>
+
+          <h3>Serviços cadastrados</h3>
+          <ul class="record-list" id="service-list" aria-live="polite"></ul>
+        </article>
+
+        <article class="admin-card">
+          <h2>Novo barbeiro</h2>
+          <form id="barber-form">
+            <label>
+              Nome
+              <input name="name" type="text" maxlength="100" required />
+            </label>
+            <button class="primary-button" type="submit">Cadastrar barbeiro</button>
+            <p class="form-message" id="barber-message" role="status" aria-live="polite"></p>
+          </form>
+
+          <h3>Barbeiros cadastrados</h3>
+          <ul class="record-list" id="barber-list" aria-live="polite"></ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Feito para cuidar bem do seu tempo.</p>
+    </footer>
+  </body>
+</html>
